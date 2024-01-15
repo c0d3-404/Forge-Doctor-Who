@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "doctorwho:sapphire_block"
+    }
+  ],
+  "result":{
+    "item": "doctorwho:sapphire",
+    "count": 9
+  }
+
+}
