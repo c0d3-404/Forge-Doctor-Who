@@ -1,6 +1,7 @@
 package net.eubic0d3.doctorwho;
 
 import com.mojang.logging.LogUtils;
+import net.eubic0d3.doctorwho.block.ModBlocks;
 import net.eubic0d3.doctorwho.item.ModCreativeModeTabs;
 import net.eubic0d3.doctorwho.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
@@ -34,6 +35,7 @@ public class DoctorWho
 
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
