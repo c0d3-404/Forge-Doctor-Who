@@ -53,14 +53,7 @@ public class DoctorWho
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.SAPPHIRE);
-            event.accept(ModItems.RAW_SAPPHIRE);
-        }
-        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
-            event.accept(ModBlocks.SAPPHIRE_BLOCK);
-            event.accept(ModBlocks.RAW_SAPPHIRE_BLOCK);
-        }
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

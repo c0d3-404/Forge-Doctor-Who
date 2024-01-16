@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "doctorwho:raw_sapphire"
+    }
+  },
+  "result": {
+    "item": "doctorwho:raw_sapphire_block"
+  }
+}
