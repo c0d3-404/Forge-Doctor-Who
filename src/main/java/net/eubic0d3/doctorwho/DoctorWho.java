@@ -1,12 +1,6 @@
 package net.eubic0d3.doctorwho;
 
 import com.mojang.logging.LogUtils;
-import net.eubic0d3.doctorwho.block.ModBlocks;
-import net.eubic0d3.doctorwho.item.ModCreativeModeTabs;
-import net.eubic0d3.doctorwho.item.ModItems;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -33,16 +27,17 @@ public class DoctorWho
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModCreativeModeTabs.register(modEventBus);
-        ModItems.register(modEventBus);
-        ModBlocks.register(modEventBus);
-
+        // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
 
+        // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
+
+        // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
@@ -53,7 +48,6 @@ public class DoctorWho
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
